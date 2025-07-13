@@ -1,5 +1,4 @@
 discord.py[voice]==2.3.1
 aiohttp==3.8.4
 python-dotenv==1.0.0
-fastapi==0.95.2
-uvicorn[standard]==0.22.0
+discord-ext-voice-recv==0.0.7
