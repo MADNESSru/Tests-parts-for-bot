@@ -103,7 +103,7 @@ class AudioProcessor(voice_recv.AudioSink):
 
     async def _send_to_whisper(self, wav_bytes: bytes):
         logger.info("Sending audio to Whisper API for transcription...")
-        url = "https://api.openai.com/v1/audio/transcriptions"
+        url = "https://whisper-api.com/api/v1/async/transcribe"
         headers = {
             "Authorization": f"Bearer {self.whisper_api_key}"
         }
