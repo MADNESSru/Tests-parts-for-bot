@@ -10,6 +10,16 @@ import traceback
 import io
 import wave
 
+from flask import Flask, request
+
+app = Flask(__name__)
+
+if __name__ == "__main__":
+    # Запуск на 0.0.0.0 и порту из переменной окружения PORT (Render требует)
+    import os
+    port = int(os.getenv("PORT", 5000))
+    app.run(host="0.0.0.0", port=port)
+
 load_dotenv()
 
 # Настройка логгера
