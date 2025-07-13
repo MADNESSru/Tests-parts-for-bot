@@ -1,5 +1,5 @@
 discord.py[voice]==2.3.1
 aiohttp==3.8.4
 python-dotenv==1.0.0
-discord-ext-voice-recv==0.0.7
+discord-ext-voice-recv==0.4.2a145
 Flask==2.3.2
