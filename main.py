@@ -5,6 +5,15 @@ import logging
 import aiohttp
 from dotenv import load_dotenv
 
+from fastapi import FastAPI
+
+app = FastAPI()
+
+@app.get("/")
+async def root():
+    return {"message": "Render Web Service is running"}
+
+
 load_dotenv()
 
 TOKEN = os.getenv("DISCORD_BOT_TOKEN")
