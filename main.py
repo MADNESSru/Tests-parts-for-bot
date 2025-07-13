@@ -5,6 +5,20 @@ import logging
 import aiohttp
 import asyncio
 from dotenv import load_dotenv
+import os
+from fastapi import FastAPI
+
+app = FastAPI()
+
+@app.get("/")
+async def root():
+    return {"message": "Render Web Service is running"}
+
+if __name__ == "__main__":
+    import uvicorn
+    port = int(os.getenv("PORT", 8000))
+    uvicorn.run(app, host="0.0.0.0", port=port)
+
 
 # Загружаем переменные окружения из файла .env
 load_dotenv()
